@@ -181,13 +181,7 @@
   }
 
   .playstore-badge {
-    flex-shrink: 0;
-  }
-
-  .badge-text {
-    font-size: 0.6rem;
-    padding: 0.3rem 0.5rem;
-    white-space: nowrap;
+    display: none;
   }
 }
 
@@ -206,8 +200,7 @@
     padding: 0.25rem 0.3rem;
   }
 
-  .badge-text {
-    font-size: 0.55rem;
-    padding: 0.25rem 0.4rem;
+  .playstore-badge {
+    display: none;
   }
 }
