@@ -6,7 +6,6 @@ const Header = () => {
   const location = useLocation()
 
   const navLinks = [
-    { path: '/', label: 'Home' },
     { path: '/for-employers', label: 'For Employers' },
     { path: '/for-job-seekers', label: 'For Job Seekers' },
     { path: '/contact-us', label: 'Contact Us' },
@@ -65,3 +64,4 @@ const Header = () => {
 }
 
 export default Header
+
