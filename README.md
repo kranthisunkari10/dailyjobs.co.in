@@ -56,6 +56,27 @@ The built files will be in the `dist` directory.
 npm run preview
 ```
 
+## Deployment Notes
+
+### Direct URL Access (Page Not Found Issue)
+
+When deploying to production, ensure your server is configured to handle client-side routing. This React app uses React Router for navigation, which requires all routes to redirect to `index.html`.
+
+**For Apache servers:** Use the `.htaccess` file in the `public` folder (automatically copied to `dist` during build).
+
+**For Netlify:** Use the `_redirects` file in the `public` folder (automatically copied to `dist` during build).
+
+**For Vercel:** Use the `vercel.json` file in the `public` folder (automatically copied to `dist` during build).
+
+**For Nginx:** Add this to your server configuration:
+```nginx
+location / {
+  try_files $uri $uri/ /index.html;
+}
+```
+
+The Vite dev server handles routing automatically, so direct URLs work in development without additional configuration.
+
 ## Tech Stack
 
 - **React 18** - UI library
